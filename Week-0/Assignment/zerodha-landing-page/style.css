@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+.header {
+
+    box-shadow: 0 1px 1px  rgb(236, 234, 234);
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    width: 75%;
+    margin: auto;
+    justify-content: space-between;
+    padding: 1.5rem;
+
+}
+.navbar .logo {
+    width: 8rem;
+}
+.navbar .menu {
+    margin: 0;
+    color: gray;
+    padding: 0;
+    display: flex;
+    gap: 3rem;
+    list-style-type: none;
+}
+.landing__wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.landing_img {
+    width: 50%;
+    margin: 3rem 0;
+}
+.title {
+    font-size: 3rem;
+    margin: 0;
+    font-weight: 500;
+}
+.sub__title{
+    font-size: 1.1rem;
+}
+.signup__btn {
+    padding: 1rem 2rem;
+    outline: transparent;
+    border: transparent;
+    background-color: #387ed1;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 2px;
+    cursor: pointer;
+    margin-top: 0.7rem;
+}
