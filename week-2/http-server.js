@@ -8,14 +8,15 @@ const TODOS = [];
 app.get('/', (req, res) =>{
     res.send("Welcome")
 })
+
 app.post('/addtodo', (req, res) => {
     const idExist = TODOS.find(todo => todo.id === req.body.id);
     if(idExist) {
-        res.send("Cannot add todo with id: " + req.body.id);
+        res.send("Cannot add todo!");
     } else {
-    const data = req.body;
-    TODOS.push(data);
-    res.send("Todo Added!");
+        const data = req.body;
+        TODOS.push(data);
+        res.send("Todo Added!");
     }
 })
 
@@ -29,6 +30,7 @@ app.put('/update', (req, res) => {
         res.send("No todo found! with id " + id);
     }
 })
+
 app.delete('/delete', (req, res) =>{
     const todoExist = TODOS.find(todo => todo.id === req.body.id);
     if(todoExist){
