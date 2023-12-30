@@ -1,5 +1,14 @@
 <html>
     <script>
+        function debounce(fn, delay) {
+            let timeId;
+            return (...args) => {
+                clearTimeout(timeId);
+                timeId = setTimeout(() =>{
+                    fn(...args);
+                }, delay);
+            }
+        }
         function populateDiv() {
             const a = document.getElementById("firstNumber").value;
             const b = document.getElementById("secondNumber").value;
