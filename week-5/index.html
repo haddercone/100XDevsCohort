@@ -12,12 +12,14 @@
         state.count++;
         buttonComponentRerender()
     }
+    // rerender logic for out own button
     function buttonComponentRerender() {
         document.getElementById('btnParent').innerHTML= "";
         console.log(state.count)
         const component = buttonComponent(state.count);
         document.getElementById('btnParent').appendChild(component);
     }
+
     function buttonComponent(count) {
         const btn = document.createElement('button');
         btn.innerHTML = `Count ${count}`
