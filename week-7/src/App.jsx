@@ -3,7 +3,7 @@ import { CountContext } from "./context";
 import { Navigate } from "react-router-dom";
 import { RecoilRoot, useRecoilState, useRecoilValue } from "recoil";
 import { countAtom, evenSelector } from "./store/atoms/count";
-import { filterSelector, textAtom, todoAtom } from "./store/atoms/todos";
+import { textAtom } from "./store/atoms/todos";
 
 
 function App() {
@@ -36,6 +36,7 @@ function TextInput() {
 }
 
 function Todos() {
+  // const todos = useRecoilValue(todoAtom);
   const todos = useRecoilValue(filterSelector)
 
   return todos.map((todo, idx) =>  {
