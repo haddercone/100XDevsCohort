@@ -1,7 +1,9 @@
-import Admin from "@repo/ui/admin"
+import AdminPage from "@repo/ui/admin"
+import { InputBox } from "@repo/ui/input-box"
 
 export default function() {
     return <div>
-        <Admin />
+        <AdminPage />
+        <InputBox />
     </div>
 }
